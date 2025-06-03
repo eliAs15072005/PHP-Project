@@ -1,0 +1,341 @@
+/* === Globale Einstellungen === */
+* {
+    box-sizing: border-box;
+    /* Verhindert, dass Padding/Border die Gesamtgröße erhöhen */
+}
+
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --text-dark: #333;
+    --background-light: #f4f4f4;
+}
+
+/* Grundstil für gesamten Body */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background-light);
+    margin: 40px;
+}
+
+/* === Gemeinsame Überschriften === */
+h1,
+h2,
+h3 {
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* === Formular-Styling (global für Login, Registrierung, Import) === */
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Formular-Boxen === */
+.form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Eingabefelder in Formularbox */
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Absenden-Button in Formularbox */
+.form-box input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover-Effekt für Submit-Button */
+.form-box input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* === Linkbereiche im Formular === */
+.form-box .form-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-box .form-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* === Registrierungsspezifisches Styling === */
+.register-box input[type="submit"] {
+    background: var(--success-color);
+}
+
+/* Hover-Effekt für Submit-Button in Registrierung */
+.register-box input[type="submit"]:hover {
+    background: #218838;
+}
+
+/* === Feedback-Meldungen === */
+.erfolg,
+.achtung {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Erfolgsnachricht (grün) */
+.erfolg {
+    border: 2px solid #4CAF50;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Fehlermeldung / Warnung (rot) */
+.achtung {
+    border: 2px solid var(--danger-color);
+    background-color: rgb(237, 212, 212);
+    color: var(--danger-color);
+}
+
+/* === Home === */
+.home h1 {
+    text-align: center;
+}
+
+/* Links in Home-Bereich oben links */
+.home .oben-links a {
+    margin: 5px;
+}
+
+/* === Login-Seite Layout === */
+.login {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Login-Box-Styling */
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Überschrift im Login-Formular */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Eingabefelder im Login-Formular */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login-Button */
+.login-box input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover-Effekt Login-Button */
+.login-box input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Link zur Registrierung im Login-Formular */
+.login-box .register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-box .register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* === Registrierung Seite Layout === */
+.registration {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Registrierung-Box Styling */
+.register-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Überschrift in Registrierung */
+.register-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Eingabefelder Registrierung */
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Registrierung-Submit-Button */
+.register-box input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover-Effekt Registrierung */
+.register-box input[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Link zurück zum Login */
+.register-box .login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-box .login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* === Allgemeines Button & Dateiinput Styling === */
+input[type="submit"],
+input[type="file"] {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* (Doppelter body-Block – entfernen empfohlen) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+/* Farbe für untergeordnete Überschriften */
+h2,
+h3 {
+    color: #333;
+}
+
+/* Abstand zwischen Formularen */
+form {
+    margin-bottom: 20px;
+}
+
+/* (Doppelt) Styling für Submit & File – kann entfernt werden */
+input[type="submit"],
+input[type="file"] {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Erfolgsmeldung alternativ */
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+/* Fehlermeldung alternativ */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Tabellenlayout */
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 80%;
+}
+
+/* Tabellenrahmen */
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+/* Tabellenzellen-Design */
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Formulargruppen nebeneinander anzeigen */
+.button-group form {
+    display: inline-block;
+}
